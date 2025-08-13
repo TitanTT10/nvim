@@ -3,18 +3,24 @@
 this is my neovim setup
 
 ## shortcuts
-(<leader> = space)
 
-"<leader>do"    - open floating diagnostics window
-"<leader>d,"    - jump to previous diagnostics message
-"<leader>d."    - jump to next diagnostics message
-"<leader>dd"    - show all diagnostics in telescope-ui window
+" *space* do"    - open floating diagnostics window
 
-"<leader>K"     - show info on (eg.) function
-"<leader>gd"    - go to definition
-"<leader>ca"    - use code actions
+" *space* d,"    - jump to previous diagnostics message
 
-"<leader>gf"    - format (if formatter is installed)
+" *space* d."    - jump to next diagnostics message
 
-"<leader>ff"    - open telescope file switcher
-"<leader>fh"    - open a *fancy* help menu
+" *space* dd"    - show all diagnostics in telescope-ui window
+
+" *space* K"     - show info on (eg.) function
+
+" *space* gd"    - go to definition
+
+" *space* ca"    - use code actions
+
+
+" *space* gf"    - format (if formatter is installed)
+
+" *space* ff"    - open telescope file switcher
+
+" *space* fh"    - open the help menu by telescope
