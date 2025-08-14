@@ -2,25 +2,36 @@
 
 this is my neovim setup
 
-## shortcuts
+# my custom shortcuts
 
-" *space* do"    - open floating diagnostics window
+## diagnostics (Errors, Warnings, ...)
 
-" *space* d,"    - jump to previous diagnostics message
+"*space* do"    - open floating diagnostics window
 
-" *space* d."    - jump to next diagnostics message
+"*space* d,"    - jump to previous diagnostics message
 
-" *space* dd"    - show all diagnostics in telescope-ui window
+"*space* d."    - jump to next diagnostics message
 
-" *space* K"     - show info on (eg.) function
+"*space* dd"    - show all diagnostics in telescope-ui window
 
-" *space* gd"    - go to definition
+## conveniences and navigation
 
-" *space* ca"    - use code actions
+"*space* K"     - show info on (eg.) function
 
+"*space* gd"    - go to definition
 
-" *space* gf"    - format (if formatter is installed)
+"*space* ca"    - use code actions
 
-" *space* ff"    - open telescope file switcher
+"*space* gf"    - format (if formatter is installed)
 
-" *space* fh"    - open the help menu by telescope
+"*space* ff"    - open telescope file switcher
+
+"*space* fh"    - open the help menu by telescope
+
+## code folding
+
+"*space* zR"    - open all folds
+
+"*space* zM"    - close all folds
+
+"*space* zK"    - 'peek' into fold

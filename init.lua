@@ -16,7 +16,8 @@ require("vim-options")
 require("lazy").setup("plugins")
 require("plugins.diagnostics")
 
--- enter netrw on startup
+--[[ enter netrw on startup
 if next(vim.fn.argv()) == nil then
 	vim.cmd("Ex")
 end
+]]

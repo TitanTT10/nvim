@@ -20,3 +20,4 @@ vim.opt.relativenumber = true
 -- config to show whitespace
 vim.opt.list = true
 vim.opt.listchars = { space = "·", trail = "•", tab = "~~", extends = ">", precedes = "<" }
+
