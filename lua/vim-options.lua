@@ -15,7 +15,7 @@ vim.opt.ruler = false
 
 -- turn on line numbers
 vim.opt.number = true
-vim.opt.relativenumber = true
+-- vim.opt.relativenumber = true
 
 -- config to show whitespace
 vim.opt.list = true
