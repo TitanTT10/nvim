@@ -30,8 +30,8 @@ this is my neovim setup
 
 ## code folding
 
-"*space* zR"    - open all folds
+"zR"    - open all folds
 
-"*space* zM"    - close all folds
+"zM"    - close all folds
 
-"*space* zK"    - 'peek' into fold
+"zK"    - 'peek' into fold
