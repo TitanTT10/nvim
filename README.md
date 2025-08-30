@@ -1,37 +1,27 @@
-# my NeoVim setup
+# My Neovim Setup
 
-this is my neovim setup
+This is my Neovim setup.
 
-# my custom shortcuts
+# My Custom Shortcuts
 
-## diagnostics (Errors, Warnings, ...)
+## Diagnostics (Errors, Warnings, etc.)
 
-"*space* do"    - open floating diagnostics window
+- \<space\> do – Opens floating diagnostics window.
+- \<space\> d, – Jumps to previous diagnostics message.
+- \<space\> d. – Jumps to next diagnostics message.
+- \<space\> dd – Shows all diagnostics in Telescope UI window.
 
-"*space* d,"    - jump to previous diagnostics message
+## Conveniences and Navigation
 
-"*space* d."    - jump to next diagnostics message
+- \<space\> K – Shows info on (e.g.) function.
+- \<space\> gd – Go to definition.
+- \<space\> ca – Use code actions.
+- \<space\> gf – Format the current file (if formatter is installed).
+- \<space\> ff – Open Telescope file switcher.
+- \<space\> fh – Open the help menu using Telescope.
 
-"*space* dd"    - show all diagnostics in telescope-ui window
+## Code Folding
 
-## conveniences and navigation
-
-"*space* K"     - show info on (eg.) function
-
-"*space* gd"    - go to definition
-
-"*space* ca"    - use code actions
-
-"*space* gf"    - format (if formatter is installed)
-
-"*space* ff"    - open telescope file switcher
-
-"*space* fh"    - open the help menu by telescope
-
-## code folding
-
-"zR"    - open all folds
-
-"zM"    - close all folds
-
-"zK"    - 'peek' into fold
+- zR – Open all folds.
+- zM – Close all folds.
+- zK – Peek into fold.
