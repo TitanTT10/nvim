@@ -4,11 +4,29 @@ vim.g.mapleader = " "
 -- turn off line wrapping
 vim.opt.wrap = false
 
--- use 4 spaces instead of tabs
+-- set std indentation
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
+
+-- Set indentation for Lua files
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "lua",
+    callback = function()
+        vim.opt_local.expandtab = false
+    end,
+})
+
+-- Set indentation for Nix files
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "nix",
+    callback = function()
+        vim.opt_local.expandtab = true
+        vim.opt_local.shiftwidth = 2
+        vim.opt_local.softtabstop = 2
+    end,
+})
 
 -- turn off ruler
 vim.opt.ruler = false

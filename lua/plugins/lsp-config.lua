@@ -18,8 +18,8 @@ return {
     {
         "neovim/nvim-lspconfig",
         config = function()
-            local lspconfig = require("lspconfig")
-            lspconfig.lua_ls.setup({})
+	    -- local lspconfig = require("lspconfig") -- got msg that this will be deprecated
+            -- lspconfig.lua_ls.setup({})             -- just leaving it out as it doesn't seem to change anything
 
             vim.keymap.set("n", "<leader>K", vim.lsp.buf.hover, {})
             vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
