@@ -1,9 +1,24 @@
 -- set <leader> variable
 vim.g.mapleader = " "
 
+
+-- ### visual ###
 -- turn off line wrapping
 vim.opt.wrap = false
 
+-- turn off ruler
+vim.opt.ruler = false
+
+-- turn on line numbers
+vim.opt.number = true
+vim.opt.relativenumber = true
+
+-- config to show whitespace
+vim.opt.list = true
+vim.opt.listchars = { space = "·", trail = "•", tab = "~~", extends = ">", precedes = "<" }
+
+
+-- ### indentation ###
 -- set std indentation
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
@@ -28,14 +43,13 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
--- turn off ruler
-vim.opt.ruler = false
 
--- turn on line numbers
-vim.opt.number = true
-vim.opt.relativenumber = true
+-- ### fileformat / line endings ###
+-- Set Unix line endings ('\n' instead of '\r\n')
+vim.opt.fileformat = "unix"
 
--- config to show whitespace
-vim.opt.list = true
-vim.opt.listchars = { space = "·", trail = "•", tab = "~~", extends = ">", precedes = "<" }
-
+-- Automatically convert line endings on save
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = "*",
+    command = ":%s/\r//g"  -- Remove Carriage Returns
+})
