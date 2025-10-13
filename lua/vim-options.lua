@@ -48,8 +48,9 @@ vim.api.nvim_create_autocmd("FileType", {
 -- Set Unix line endings ('\n' instead of '\r\n')
 vim.opt.fileformat = "unix"
 
--- Automatically convert line endings on save
+--[[ Automatically convert line endings on save
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*",
     command = ":%s/\r//g"  -- Remove Carriage Returns
 })
+]]
