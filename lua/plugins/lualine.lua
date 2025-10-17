@@ -7,7 +7,6 @@ return {
             options = {
                 theme = "dracula",
             },
-            sections = { lualine_x = { "encoding", "filetype" } },
         })
     end,
 }
