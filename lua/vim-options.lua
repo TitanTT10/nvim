@@ -15,8 +15,11 @@ vim.opt.relativenumber = true
 
 -- config to show whitespace
 vim.opt.list = true
-vim.opt.listchars = { space = "·", trail = "•", tab = "~~", extends = ">", precedes = "<" }
-
+vim.opt.listchars = {
+	space = "·", nbsp = "␣", trail = "•", tab = "▸ ",
+	extends = "❯", precedes = "❮",
+	eol = "↲",
+}
 
 -- ### indentation ###
 -- set std indentation
@@ -27,20 +30,20 @@ vim.opt.shiftwidth = 4
 
 -- Set indentation for Lua files
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = "lua",
-    callback = function()
-        vim.opt_local.expandtab = false
-    end,
+	pattern = "lua",
+	callback = function()
+		vim.opt_local.expandtab = false
+	end,
 })
 
 -- Set indentation for Nix files
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = "nix",
-    callback = function()
-        vim.opt_local.expandtab = true
-        vim.opt_local.shiftwidth = 2
-        vim.opt_local.softtabstop = 2
-    end,
+	pattern = "nix",
+	callback = function()
+		vim.opt_local.expandtab = true
+		vim.opt_local.shiftwidth = 2
+		vim.opt_local.softtabstop = 2
+	end,
 })
 
 
@@ -48,9 +51,7 @@ vim.api.nvim_create_autocmd("FileType", {
 -- Set Unix line endings ('\n' instead of '\r\n')
 vim.opt.fileformat = "unix"
 
---[[ Automatically convert line endings on save
-vim.api.nvim_create_autocmd("BufWritePre", {
-    pattern = "*",
-    command = ":%s/\r//g"  -- Remove Carriage Returns
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+	pattern = "*",
+	command = "setlocal fileformat=unix",
 })
-]]
