@@ -28,7 +28,7 @@ return {
 			enable_hex = true,
 
 			-- Highlight short hex colors e.g. '#fff'
-			enable_short_hex = false,
+			enable_short_hex = true,
 
 			---Highlight rgb colors, e.g. 'rgb(0 0 0)'
 			enable_rgb = true,
