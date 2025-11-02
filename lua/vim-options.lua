@@ -18,7 +18,7 @@ vim.opt.list = true
 vim.opt.listchars = {
 	space = "·", nbsp = "␣", trail = "•", tab = "▸ ",
 	extends = "❯", precedes = "❮",
-	eol = "↩", -- "↲"
+	eol = "↲", -- "↩"
 }
 
 -- ### indentation ###
