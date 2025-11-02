@@ -55,3 +55,9 @@ vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
 	pattern = "*",
 	command = "setlocal fileformat=unix",
 })
+
+
+-- ### netrw settings ###
+vim.g.netrw_banner = 0
+vim.g.netrw_liststyle = 0
+vim.g.netrw_browse_split = 2
