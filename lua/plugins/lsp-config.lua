@@ -24,19 +24,6 @@ return {
             vim.keymap.set("n", "<leader>K", vim.lsp.buf.hover, {})
             vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
             vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
-
-            vim.lsp.config('pylsp', {
-              settings = {
-                pylsp = {
-                  plugins = {
-                    pycodestyle = {
-                      ignore = {'W391'},
-                      maxLineLength = 100
-                    }
-                  }
-                }
-              }
-            })
         end
     }
 }
