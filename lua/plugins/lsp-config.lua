@@ -19,8 +19,6 @@ return {
 		"neovim/nvim-lspconfig",
 		config = function()
 
-		-- local lspconfig = require("lspconfig") -- got msg that this will be deprecated
-		-- Rust-specific LSP configuration
 		vim.lsp.config("rust_analyzer", {
 			settings = {
 				['rust-analyzer'] = {
@@ -42,9 +40,16 @@ return {
 			},
 			-- Optional: Add keymaps specific to Rust
 			on_attach = function(client, bufnr)
-				-- Inlay hints toggle
+				-- Inlay hints toggle with notification
 				vim.keymap.set('n', '<leader>uh', function()
-					vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({bufnr = bufnr}), {bufnr = bufnr})
+					local current_state = vim.lsp.inlay_hint.is_enabled({bufnr = bufnr})
+					vim.lsp.inlay_hint.enable(not current_state, {bufnr = bufnr})
+
+					if current_state then
+						vim.notify("Inlay Hints Disabled", vim.log.levels.WARN)
+					else
+						vim.notify("Inlay Hints Enabled", vim.log.levels.INFO)
+					end
 				end, { buffer = bufnr, desc = 'Toggle Inlay Hints' })
 			end
 		})
