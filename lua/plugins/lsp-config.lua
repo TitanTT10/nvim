@@ -43,7 +43,7 @@ return {
 				-- Optional: Add keymaps specific to Rust
 				on_attach = function(client, bufnr)
 					-- Ensure inlay hints are on when LSP attaches
-					vim.lsp.inlay_hints.enable(true, {bufnr = bufnr})
+					vim.lsp.inlay_hint.enable(true, {bufnr = bufnr})
 
 					-- Inlay hints toggle with notification
 					vim.keymap.set('n', '<leader>uh', function()
