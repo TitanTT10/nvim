@@ -9,8 +9,8 @@ vim.api.nvim_set_keymap('n', '<leader>dd', '<cmd>Telescope diagnostics<CR>', { n
 
 vim.diagnostic.config({
   virtual_text = {
-    -- source = "always",  -- Or "if_many"
-    prefix = '■', -- Could be '■', '▎', 'x', '●'
+    source = "always",  -- Or "if_many"
+    prefix = '●', -- Could be '■', '▎', 'x', '●'
   },
   severity_sort = true,
   float = {
