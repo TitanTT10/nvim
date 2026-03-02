@@ -2,7 +2,7 @@ return {
 	{
 		"mason-org/mason.nvim",
 		config = function()
-		require("mason").setup()
+			require("mason").setup()
 		end
 	},
 	{
@@ -62,6 +62,7 @@ return {
 			vim.keymap.set("n", "<leader>K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
 			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
+			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {})
 		end
 	}
 }

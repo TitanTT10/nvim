@@ -20,6 +20,7 @@ This is my Neovim setup.
 - `<space> gf` – Format the current file (if formatter is installed).
 - `<space> ff` – Open Telescope file switcher.
 - `<space> fh` – Open the help menu using Telescope.
+- `<space> rn` – Rename a variable (or function etc.).
 
 ## Code Folding
 
