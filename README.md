@@ -13,7 +13,7 @@ This is my Neovim setup.
 
 ## Conveniences and Navigation
 
-- `<space> uh` – Toggles inlay hints for rust.
+- `<space> uh` – Toggles inlay hints.
 - `<space> K` – Shows info on (e.g.) function.
 - `<space> gd` – Go to definition.
 - `<space> ca` – Use code actions.
