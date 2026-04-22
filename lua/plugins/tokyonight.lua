@@ -5,7 +5,7 @@ return {
 	opts = {},
 	config = function()
 		vim.cmd.colorscheme("tokyonight")
---		vim.cmd("highlight Normal ctermbg=none guibg=none")
+		vim.cmd("highlight Normal ctermbg=none guibg=none")
 
 	end,
 }
