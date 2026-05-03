@@ -25,8 +25,6 @@ vim.diagnostic.config({
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "<leader>do", vim.diagnostic.open_float, { desc = "Open diagnostic float" })
-vim.keymap.set("n", "<leader>d,", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic" })
-vim.keymap.set("n", "<leader>d.", vim.diagnostic.goto_next, { desc = "Go to next diagnostic" })
 vim.keymap.set("n", "<leader>dd", "<cmd>Telescope diagnostics<CR>",
 	{ noremap = true, silent = true, desc = "Telescope diagnostics" })
 -- Alternative without Telescope: vim.keymap.set("n", "<leader>dd", vim.diagnostic.setloclist, { desc = "Set location list" })

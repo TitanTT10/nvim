@@ -7,8 +7,6 @@ This is my Neovim setup.
 ## Diagnostics (Errors, Warnings, etc.)
 
 - `<space> do` – Opens floating diagnostics window.
-- `<space> d,` – Jumps to previous diagnostics message.
-- `<space> d.` – Jumps to next diagnostics message.
 - `<space> dd` – Shows all diagnostics in Telescope UI window.
 
 ## Conveniences and Navigation
