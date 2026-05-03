@@ -6,8 +6,7 @@ return {
 	config = function()
 		require("tokyonight").setup({ transparent = true })
 		vim.cmd.colorscheme("tokyonight")
---		vim.cmd("highlight Normal ctermbg=none guibg=none")
-
+		--		vim.cmd("highlight Normal ctermbg=none guibg=none")
 	end,
 }
 --"tokyonight" "tokyonight-night" "tokyonight-storm" "tokyonight-day" "tokyonight-moon"

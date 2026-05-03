@@ -1,7 +1,6 @@
 -- set <leader> variable
 vim.g.mapleader = " "
 
-
 -- ### visual ###
 -- turn off line wrapping
 vim.opt.wrap = false
@@ -16,8 +15,12 @@ vim.opt.relativenumber = true
 -- config to show whitespace
 vim.opt.list = true
 vim.opt.listchars = {
-	space = "·", nbsp = "␣", trail = "•", tab = "▸ ",
-	extends = "❯", precedes = "❮",
+	space = "·",
+	nbsp = "␣",
+	trail = "•",
+	tab = "▸ ",
+	extends = "❯",
+	precedes = "❮",
 	eol = "↲", -- "↩"
 }
 
@@ -40,11 +43,10 @@ vim.api.nvim_create_autocmd("FileType", {
 -- Set Unix line endings ('\n' instead of '\r\n')
 vim.opt.fileformat = "unix"
 
-vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 	pattern = "*",
 	command = "setlocal fileformat=unix",
 })
-
 
 -- ### netrw settings ###
 vim.g.netrw_banner = 0
