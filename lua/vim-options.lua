@@ -19,8 +19,8 @@ vim.opt.listchars = {
 	nbsp = "␣",
 	trail = "•",
 	tab = "▸ ",
-	extends = "❯",
-	precedes = "❮",
+	extends = "»",
+	precedes = "«",
 	eol = "↲", -- "↩"
 }
 
