@@ -52,3 +52,16 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 vim.g.netrw_banner = 0
 vim.g.netrw_liststyle = 0
 -- vim.g.netrw_browse_split = 2
+
+-- ### custom keybinds ###
+-- Tab keybinds
+vim.keymap.set('n', '<Leader>tt', ':tabnew<CR>', { noremap = true, silent = true, desc = "New tab" })
+vim.keymap.set('n', '<Leader>tn', 'gt', { noremap = true, silent = true, desc = "Next tab" })
+vim.keymap.set('n', '<Leader>tp', 'gT', { noremap = true, silent = true, desc = "Previous tab" })
+vim.keymap.set('n', '<Leader>tc', ':tabclose<CR>', { noremap = true, silent = true, desc = "Close current tab" })
+
+-- Buffer keybinds
+vim.keymap.set('n', '<Leader>bb', ':enew<CR>', { noremap = true, silent = true, desc = "New buffer" })
+vim.keymap.set('n', '<Leader>bn', ':bn<CR>', { noremap = true, silent = true, desc = "Next buffer" })
+vim.keymap.set('n', '<Leader>bp', ':bp<CR>', { noremap = true, silent = true, desc = "Previous buffer" })
+vim.keymap.set('n', '<Leader>bc', ':bdelete<CR>', { noremap = true, silent = true, desc = "Discard current buffer" })
