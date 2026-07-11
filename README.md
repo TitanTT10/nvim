@@ -2,27 +2,7 @@
 
 This is my Neovim setup.
 
-# My Custom Shortcuts
+## Credits
 
-## Diagnostics (Errors, Warnings, etc.)
-
-- `<space> do` – Opens floating diagnostics window.
-- `<space> dd` – Shows all diagnostics in Telescope UI window.
-
-## Conveniences and Navigation
-
-- `<space> uh` – Toggles inlay hints.
-- `<space> K` – Shows info on (e.g.) function.
-- `<space> gd` – Go to definition.
-- `<space> ca` – Use code actions.
-- `<space> gf` – Format the current file (if formatter is installed).
-- `<space> ff` – Open Telescope file switcher.
-- `<space> fh` – Open the help menu using Telescope.
-- `<space> fg` – Telescope live grep.
-- `<space> rn` – Rename a variable (or function etc.).
-
-## Code Folding
-
-- `zR` – Open all folds.
-- `zM` – Close all folds.
-- `zK` – Peek into fold.
+Parts of this configuration use code from [marcuscaisey/lox](https://github.com/marcuscaisey/lox).
+See `CREDITS.md` for details.

@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("vim-options")
 require("lsp-options")
+require("tree-sitter")
 require("lazy").setup("plugins")
 
 --[[ enter netrw on startup
