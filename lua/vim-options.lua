@@ -31,14 +31,6 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 
--- Set indentation for Lua files
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "lua",
-	callback = function()
-		vim.opt_local.expandtab = false
-	end,
-})
-
 -- ### fileformat / line endings ###
 -- Set Unix line endings ('\n' instead of '\r\n')
 vim.opt.fileformat = "unix"
