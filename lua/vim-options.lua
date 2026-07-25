@@ -60,6 +60,13 @@ vim.keymap.set('n', '<Leader>tn', 'gt', { noremap = true, silent = true, desc = 
 vim.keymap.set('n', '<Leader>tp', 'gT', { noremap = true, silent = true, desc = "Previous tab" })
 vim.keymap.set('n', '<Leader>tc', ':tabclose<CR>', { noremap = true, silent = true, desc = "Close current tab" })
 
+-- Go to tab x (1-9 and 0)
+for i = 1, 9 do
+	vim.keymap.set('n', '<Leader>t' .. i, function()
+		vim.cmd('tabn ' .. i) -- jump to tab number i
+	end, { noremap = true, silent = true, desc = 'Go to tab ' .. i })
+end
+
 -- Buffer keybinds
 vim.keymap.set('n', '<Leader>bb', ':enew<CR>', { noremap = true, silent = true, desc = "New buffer" })
 vim.keymap.set('n', '<Leader>bn', ':bn<CR>', { noremap = true, silent = true, desc = "Next buffer" })
