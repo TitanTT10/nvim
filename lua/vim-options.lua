@@ -47,7 +47,25 @@ vim.g.netrw_liststyle = 0
 
 -- ### custom keybinds ###
 -- Tab keybinds
-vim.keymap.set('n', '<Leader>tt', ':tabnew<CR>', { noremap = true, silent = true, desc = "New tab" })
+vim.keymap.set('n', '<Leader>tt', function()
+	local telescope_actions = require('telescope.actions')
+	local telescope_action_state = require('telescope.actions.state')
+	require('telescope.builtin').find_files({
+		attach_mappings = function(_, map)
+			telescope_actions.select_default:replace(function(prompt_bufnr)
+				local entry = telescope_action_state.get_selected_entry()
+				telescope_actions.close(prompt_bufnr)
+
+				if entry and entry.path then
+					-- Open selected file in a new tab
+					vim.cmd('tabedit ' .. vim.fn.fnameescape(entry.path))
+				end
+			end)
+
+			return true
+		end,
+	})
+end, { desc = 'New tab', silent = true })
 vim.keymap.set('n', '<Leader>tn', 'gt', { noremap = true, silent = true, desc = "Next tab" })
 vim.keymap.set('n', '<Leader>tp', 'gT', { noremap = true, silent = true, desc = "Previous tab" })
 vim.keymap.set('n', '<Leader>tc', ':tabclose<CR>', { noremap = true, silent = true, desc = "Close current tab" })
