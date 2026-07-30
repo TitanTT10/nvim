@@ -1,5 +1,5 @@
 -- set <leader> variable
-vim.g.mapleader = " "
+vim.g.mapleader = ' '
 
 -- ### visual ###
 -- turn off line wrapping
@@ -15,13 +15,13 @@ vim.opt.relativenumber = true
 -- config to show whitespace
 vim.opt.list = true
 vim.opt.listchars = {
-	space = "·",
-	nbsp = "␣",
-	trail = "•",
-	tab = "▸ ",
-	extends = "»",
-	precedes = "«",
-	eol = "↲", -- "↩"
+	space = '·',
+	nbsp = '␣',
+	trail = '•',
+	tab = '» ', -- '▸ '
+	extends = '🡆',
+	precedes = '🡄',
+	eol = '↩', -- '↲', '↩'
 }
 
 -- ### indentation ###
@@ -33,11 +33,11 @@ vim.opt.shiftwidth = 4
 
 -- ### fileformat / line endings ###
 -- Set Unix line endings ('\n' instead of '\r\n')
-vim.opt.fileformat = "unix"
+vim.opt.fileformat = 'unix'
 
-vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-	pattern = "*",
-	command = "setlocal fileformat=unix",
+vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
+	pattern = '*',
+	command = 'setlocal fileformat=unix',
 })
 
 -- ### netrw settings ###
@@ -47,6 +47,7 @@ vim.g.netrw_liststyle = 0
 
 -- ### custom keybinds ###
 -- Tab keybinds
+--[[
 vim.keymap.set('n', '<Leader>tt', function()
 	local telescope_actions = require('telescope.actions')
 	local telescope_action_state = require('telescope.actions.state')
@@ -66,9 +67,10 @@ vim.keymap.set('n', '<Leader>tt', function()
 		end,
 	})
 end, { desc = 'New tab', silent = true })
-vim.keymap.set('n', '<Leader>tn', 'gt', { noremap = true, silent = true, desc = "Next tab" })
-vim.keymap.set('n', '<Leader>tp', 'gT', { noremap = true, silent = true, desc = "Previous tab" })
-vim.keymap.set('n', '<Leader>tc', ':tabclose<CR>', { noremap = true, silent = true, desc = "Close current tab" })
+]]
+vim.keymap.set('n', '<Leader>tn', 'gt', { noremap = true, silent = true, desc = 'Next tab' })
+vim.keymap.set('n', '<Leader>tp', 'gT', { noremap = true, silent = true, desc = 'Previous tab' })
+vim.keymap.set('n', '<Leader>tc', ':tabclose<CR>', { noremap = true, silent = true, desc = 'Close current tab' })
 
 -- Go to tab x (1-9 and 0)
 for i = 1, 9 do
@@ -78,7 +80,7 @@ for i = 1, 9 do
 end
 
 -- Buffer keybinds
-vim.keymap.set('n', '<Leader>bb', ':enew<CR>', { noremap = true, silent = true, desc = "New buffer" })
-vim.keymap.set('n', '<Leader>bn', ':bn<CR>', { noremap = true, silent = true, desc = "Next buffer" })
-vim.keymap.set('n', '<Leader>bp', ':bp<CR>', { noremap = true, silent = true, desc = "Previous buffer" })
-vim.keymap.set('n', '<Leader>bc', ':bdelete<CR>', { noremap = true, silent = true, desc = "Discard current buffer" })
+vim.keymap.set('n', '<Leader>bb', ':enew<CR>', { noremap = true, silent = true, desc = 'New buffer' })
+vim.keymap.set('n', '<Leader>bn', ':bn<CR>', { noremap = true, silent = true, desc = 'Next buffer' })
+vim.keymap.set('n', '<Leader>bp', ':bp<CR>', { noremap = true, silent = true, desc = 'Previous buffer' })
+vim.keymap.set('n', '<Leader>bc', ':bdelete<CR>', { noremap = true, silent = true, desc = 'Discard current buffer' })

@@ -1,12 +1,12 @@
 return {
-	"folke/tokyonight.nvim",
+	'folke/tokyonight.nvim',
 	lazy = false,
 	priority = 1000,
 	opts = {},
 	config = function()
-		require("tokyonight").setup({ transparent = true })
-		vim.cmd.colorscheme("tokyonight")
-		--		vim.cmd("highlight Normal ctermbg=none guibg=none")
+		require('tokyonight').setup({ transparent = true })
+		vim.cmd.colorscheme('tokyonight')
+		--		vim.cmd('highlight Normal ctermbg=none guibg=none')
 	end,
 }
---"tokyonight" "tokyonight-night" "tokyonight-storm" "tokyonight-day" "tokyonight-moon"
+--'tokyonight' 'tokyonight-night' 'tokyonight-storm' 'tokyonight-day' 'tokyonight-moon'

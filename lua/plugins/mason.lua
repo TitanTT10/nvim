@@ -1,18 +1,18 @@
 return {
 	{
-		"mason-org/mason.nvim",
+		'mason-org/mason.nvim',
 		config = function()
-			require("mason").setup()
+			require('mason').setup()
 		end
 	},
 	{
-		"mason-org/mason-lspconfig.nvim",
+		'mason-org/mason-lspconfig.nvim',
 		opts = {
-			ensure_installed = { "lua_ls", "rust_analyzer", "codebook", "clangd" },
+			ensure_installed = { 'lua_ls', 'rust_analyzer', 'codebook', 'clangd' },
 		},
 		dependencies = {
-			{ "mason-org/mason.nvim", opts = {} },
-			"neovim/nvim-lspconfig",
+			{ 'mason-org/mason.nvim', opts = {} },
+			'neovim/nvim-lspconfig',
 		}
 	},
 }
