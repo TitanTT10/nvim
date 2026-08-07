@@ -17,7 +17,9 @@ return {
 			vim.keymap.set('n', '<leader>man', builtin.man_pages, { desc = 'Telescope system manpages' })
 			vim.keymap.set('n', '<leader>opt', builtin.vim_options, { desc = 'Telescope list and edit vim options' })
 
-			-- lsp keybinds
+			vim.keymap.set('n', '<leader>fs', builtin.lsp_document_symbols, { desc = 'Telescope LSP document symbols' })
+
+			-- diagnostics keybinds
 			vim.keymap.set('n', '<leader>dd', builtin.diagnostics,
 				{ noremap = true, silent = true, desc = 'Telescope diagnostics' })
 			-- Alternative without Telescope: vim.keymap.set('n', '<leader>dd', vim.diagnostic.setloclist, { desc = 'Set location list' })
