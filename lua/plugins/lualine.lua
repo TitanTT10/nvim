@@ -33,7 +33,7 @@ return {
 					{
 						'buffers',
 						symbols = {
-							modified = '[+]',
+							modified = '●',
 							alternate_file = '#',
 							directory = ''
 						}
