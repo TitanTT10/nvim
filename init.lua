@@ -16,9 +16,11 @@ require('vim-options')
 require('lsp-options')
 require('tree-sitter')
 require('lazy').setup('plugins')
+require('usercommands')
 
 --[[ enter netrw on startup
 if next(vim.fn.argv()) == nil then
 	vim.cmd('Ex')
 end
 ]]
+
